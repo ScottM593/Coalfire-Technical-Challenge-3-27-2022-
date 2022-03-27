@@ -156,7 +156,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "transition" {
     id = "glacier"
 
     transition {
-      days = 30
+      days = 90
       storage_class = "GLACIER"
     }
     
@@ -170,7 +170,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "transition" {
     id = "clear"
     
     expiration {
-      days = 30
+      days = 90
     }
 
     filter {
